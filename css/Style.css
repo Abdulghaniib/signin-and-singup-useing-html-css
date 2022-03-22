@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: hsl(208, 100%, 97%);
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    overflow: hidden;
+}
+.contener {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 28rem;
+}
+.signin,
+.signup {
+    color: black;
+    position: relative;
+    top: 0;
+    left: 0;
+    background:rgba(255, 255, 255);
+    border: 1px solid #0d6efd;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(30px);
+    animation: Animte 2s forwards;
+}
+.contener h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.socail {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.socail a {
+    border: 1px solid #0d6efd;
+    width: 3rem; 
+    height: 3rem;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-decoration: none;
+}
+.socail a:hover {
+    background-color: black;
+    color: white;
+}
+p {
+    text-align: center;
+    margin: 1rem;    
+}
+.contener form input {
+    display: block;
+    width: 100%;
+    border: 1px solid #0d6efd;
+    outline: none;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    color:black;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.contener form input::placeholder {
+    color: black;   
+}
+.contener form input[type="submit"]{
+    background: #0d6efd;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+.contener form input[type="submit"]:hover{
+     opacity: 0.10;
+}
+.contener form small {
+    display: block;
+    margin-top: 1rem;
+
+}
+.contener form small label {
+    color: #0d6efd;
+    cursor: pointer;
+}
+.signup {
+    display: none;
+}
+#Taggle:checked~ .signin {
+    display: none;
+}
+#Taggle:checked~ .signup {
+    display: block;
+}
+@keyframes Animte {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#Toggle {
+    appearance: none;
+}
+
